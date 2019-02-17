@@ -36,8 +36,8 @@ console.log("LL");
         val: [{name: "Summedicin", dose: "2/day"}, {name: document.getElementById("m-name").getAttribute("value"), dose: document.getElementById("m-dose").getAttribute("value")}]
       }
     }).then(resp => {
-      document.getElementById("m-name").setAttribute("value", "");
-      document.getElementById("m-dose").setAttribute("value", "");
+      
     });
-
+    document.getElementById("m-name").value = "";
+      document.getElementById("m-dose").value = "";
   }
