@@ -1,0 +1,40 @@
+<app-navbar-doctor></app-navbar-doctor>
+
+<div class="container-fluid p-5">
+  <div class="container-fluid bg-dark p-3 rounded text-light d-flex patient" data-toggle="modal" data-target="#dude">
+    <img src="https://i1.wp.com/ceph.com/wp-content/uploads/2016/07/headshot-placeholder.png?ssl=1" alt="Photo" style="width: 100px; height: 100px;">
+    <div class="ml-3">
+      <strong>{{patient.profile.name}}</strong>
+      <hr>
+      <span>Weight: 165</span>
+      <br>
+      <span>Height: 5' 11"</span>
+      <br>
+      <span>Age: {{patient.profile.age}}</span>
+    </div>
+    <div class="ml-3" style="margin-top: 57px;">
+      <span>Gender: {{patient.profile.gender}}</span>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="dude" tabindex="-1"
+  role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{patient.profile.name}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input id="m-name" type="text" placeholder="Name">
+        <input id="m-dose" type="text" placeholder="Dose">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="newMeds()" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
